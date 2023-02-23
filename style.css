@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Labrada:ital,wght@0,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Labrada:ital,wght@0,400;1,500&family=Tilt+Neon&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body{
+    background: rgb(255,219,235);
+    background: radial-gradient(circle, rgba(255,219,235,1) 0%, rgba(148,187,233,1) 100%);
+    height: 100%;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.title{
+    align-self: center;
+    font-family: 'Labrada', serif;
+    font-family: 'Tilt Neon', cursive;    
+    text-align: center;
+    font-size: 17px;
+    width: 450px;
+    border-radius: 15px;
+    margin: 20px;
+    background-color: white;
+}
+
+.options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    height: 60vh;
+}
+
+.Piedra, .Papel, .Tijera{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    border-radius: 15px;
+    height: 300px;
+    width: 300px;
+    border-style: none;
+}
+
+.jugar_Container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+}
+
+.boton_jugar, .boton_intentos{
+    height: 50px;
+    width: 200px;
+    font-size: larger;
+    margin-left: 10px;
+    font-family: 'Tilt Neon', cursive;    
+    text-align: center;
+    border-radius: 15px;
+    border-style: none;
+    background-color: white;
+
+}
+
+.Piedra p, .Papel p, .Tijera p{
+    align-self:center;
+    margin-top: 50px;
+    font-size: 20px;
+    font-family: 'Labrada', serif;
+    font-family: 'Tilt Neon', cursive;
+
+}
+
+.Piedra:hover,.Papel:hover,.Tijera:hover,.boton_jugar:hover, .boton_intentos:hover{
+    background-color: black;
+    color: white;
+    fill:white
+}
+
+
+.Piedra:active,.Papel:active,.Tijera:active,.boton_jugar:active, .boton_intentos:active{
+    background-color:rgb(193, 239, 255);
+    color: black;
+    fill: black;
+}
+
+
+.containerPunt{
+    margin-top: 60px;
+    align-self: center;
+    width: 400px;
+    text-align: center;
+}
+
+
+
