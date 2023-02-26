@@ -34,6 +34,20 @@ body{
     background-color: white;
 }
 
+.rondas{
+    align-self: center;
+    height: 30px;
+    width: 200px;
+    font-size: larger;
+    margin-left: 10px;
+    font-family: 'Tilt Neon', cursive;    
+    text-align: center;
+    border-radius: 15px;
+    border-style: none;
+    background-color: white;
+}
+
+
 .options{
     display: flex;
     justify-content: center;
@@ -102,6 +116,10 @@ body{
     width: 400px;
     text-align: center;
 }
+
+/* .options{
+    visibility: hidden;
+} */
 
 
 
