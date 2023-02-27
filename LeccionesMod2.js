@@ -13,7 +13,9 @@ let ptCPU=document.getElementById('cpu')
 let rondasCont=document.getElementById('rondas')
 let opcionUsu=0
 let opcionCPU=0
-ptUsu=0
+
+let usuNum=0
+let cpuNum=0
 
 
 
@@ -32,7 +34,6 @@ botonInt.addEventListener('click',()=>{
     intentosFlag=true
 })
 
-
 opcionPiedra.addEventListener('click',()=>{
     if(intentos<=0){
         alert('Error debe ingresar primero un número de intentos')
@@ -40,8 +41,6 @@ opcionPiedra.addEventListener('click',()=>{
 
     else{
         opcionUsu=1
-        for (rondas=0;rondas<=intentos;i++){
-
             opcionCPU= Math.ceil(Math.random()*3)
         
             if (opcionCPU==1){
@@ -65,17 +64,18 @@ opcionPiedra.addEventListener('click',()=>{
             else if (opcionCPU==1 && opcionUsu==2 || opcionCPU==2 && opcionUsu==3 || opcionCPU==3 && opcionUsu==1){
                 alert(`Punto para ti \n La máquina saco ${CPU}`)
                 contRond+=1
-                ptUsu.innerHTML+=1
+                usuNum+=1
+                ptUsu.innerHTML=(`${usuNum}`)
                 rondasCont.innerHTML= (`RONDA ${contRond}`)
             }
         
             else{
                 alert(`Punto para la máquina \n La máquina sacó ${CPU}`)
                 contRond+=1
+                cpuNum+=1
                 rondasCont.innerHTML= (`RONDA ${contRond}`)
-                ptCPU.innerHTML+=1
+                ptCPU.innerHTML=(`${cpuNum}`)
             }
-    }
     }
 })
 
@@ -86,6 +86,41 @@ opcionPapel.addEventListener('click',()=>{
 
     else{
         opcionUsu=2
+        opcionCPU= Math.ceil(Math.random()*3)
+        
+        if (opcionCPU==1){
+            CPU='Piedra'
+        }
+    
+        else if (opcionCPU==2){
+            CPU='Papel'
+        }
+    
+        else{
+            CPU='Tijeras'
+        }
+    
+        if (opcionCPU==opcionUsu){
+            alert(`Empate ambos sacaron ${CPU}`)
+            contRond+=1
+            rondasCont.innerHTML= (`RONDA ${contRond}`)
+        }
+    
+        else if (opcionCPU==1 && opcionUsu==2 || opcionCPU==2 && opcionUsu==3 || opcionCPU==3 && opcionUsu==1){
+            alert(`Punto para ti \n La máquina saco ${CPU}`)
+            contRond+=1
+            usuNum+=1
+            ptUsu.innerHTML=(`${usuNum}`)
+            rondasCont.innerHTML= (`RONDA ${contRond}`)
+        }
+    
+        else{
+            alert(`Punto para la máquina \n La máquina sacó ${CPU}`)
+            contRond+=1
+            cpuNum+=1
+            rondasCont.innerHTML= (`RONDA ${contRond}`)
+            ptCPU.innerHTML=(`${cpuNum}`)
+        }
     }
 })
 
@@ -96,8 +131,44 @@ opcionTijera.addEventListener('click',()=>{
 
     else{
         opcionUsu=3
+        opcionCPU= Math.ceil(Math.random()*3)
+        
+        if (opcionCPU==1){
+            CPU='Piedra'
+        }
+    
+        else if (opcionCPU==2){
+            CPU='Papel'
+        }
+    
+        else{
+            CPU='Tijeras'
+        }
+    
+        if (opcionCPU==opcionUsu){
+            alert(`Empate ambos sacaron ${CPU}`)
+            contRond+=1
+            rondasCont.innerHTML= (`RONDA ${contRond}`)
+        }
+    
+        else if (opcionCPU==1 && opcionUsu==2 || opcionCPU==2 && opcionUsu==3 || opcionCPU==3 && opcionUsu==1){
+            alert(`Punto para ti \n La máquina saco ${CPU}`)
+            contRond+=1
+            usuNum+=1
+            ptUsu.innerHTML=(`${usuNum}`)
+            rondasCont.innerHTML= (`RONDA ${contRond}`)
+        }
+    
+        else{
+            alert(`Punto para la máquina \n La máquina sacó ${CPU}`)
+            contRond+=1
+            cpuNum+=1
+            rondasCont.innerHTML= (`RONDA ${contRond}`)
+            ptCPU.innerHTML=(`${cpuNum}`)
+        }
     }
 })
+
 
 if(intentos>0){
 
