@@ -47,13 +47,31 @@ body{
     background-color: white;
 }
 
+.puntico{
+    position: absolute;
+    bottom: 100px;
+    left: 27%;
+    width: 500px;
+    height: 200px;
+    border-radius: 5px;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.625);
+    text-align: center;
+    padding-top: 30px;
+}
+
+.puntico h1, .puntico p{
+    color: white;
+}
 
 .options{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     gap: 50px;
     height: 60vh;
+    z-index: 1;
 }
 
 .Piedra, .Papel, .Tijera{
@@ -74,7 +92,7 @@ body{
     height: 50px;
 }
 
-.boton_jugar, .boton_intentos{
+.boton_jugar, .boton_intentos, .volver{
     height: 50px;
     width: 200px;
     font-size: larger;
@@ -96,14 +114,14 @@ body{
 
 }
 
-.Piedra:hover,.Papel:hover,.Tijera:hover,.boton_jugar:hover, .boton_intentos:hover{
+.Piedra:hover,.Papel:hover,.Tijera:hover,.boton_jugar:hover, .boton_intentos:hover, .volver{
     background-color: black;
     color: white;
     fill:white
 }
 
 
-.Piedra:active,.Papel:active,.Tijera:active,.boton_jugar:active, .boton_intentos:active{
+.Piedra:active,.Papel:active,.Tijera:active,.boton_jugar:active, .boton_intentos:active , .volver{
     background-color:rgb(193, 239, 255);
     color: black;
     fill: black;
@@ -117,9 +135,35 @@ body{
     text-align: center;
 }
 
-/* .options{
-    visibility: hidden;
-} */
+
+
+.conteinerTodo{
+    position: relative;
+}
+
+.fin{
+    position: absolute;
+    bottom:10px;
+    left: 27%;
+    width: 500px;
+    height: 250px;
+    border-radius: 5px;
+    z-index: 2;
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.volver:hover{
+    background-color: black;
+    color: white;
+
+}
+
 
 
 
